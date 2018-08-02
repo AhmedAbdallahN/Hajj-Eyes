@@ -19,6 +19,7 @@
     "nonblocking": "^1.0.3",
     "request": "^2.87.0",
     "serve-favicon": "~2.1.3",
-    "stylus": "0.42.3"
+    "stylus": "0.42.3",
+    "thread-sleep": "^2.1.0"
   }
 }

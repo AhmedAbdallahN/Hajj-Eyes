@@ -1,6 +1,7 @@
 ﻿var express = require('express');
 var router = express.Router();
 var request = require('request');
+var sleep = require('thread-sleep');
 var configurations = require('../Configuration/Config');
 var CONSTANTS = require('../Configuration/Constants');
 
@@ -105,6 +106,7 @@ router.post('/api/Facebook/', function (req, res) {
 function HandlePostbackEvent(SenderID, Postback) {
     if (Postback === CONSTANTS.Commands.GET_STARTED) {
         SendDynamicTextMessage(SenderID, "اهلاً بك يا {{first_name}} فى الــ Hajj Eye"); 
+        sleep(500);
         let quickReplyActions = [];
         quickReplyActions.push(QuickReplyAction('لاحقاً',CONSTANTS.Commands.NOT_NOW));
         quickReplyActions.push(QuickReplyAction('تطوع',CONSTANTS.Commands.TTW3));  
