@@ -87,7 +87,7 @@ router.post('/api/Facebook/', function (req, res) {
             }
             else if (event.message && event.message.text) {
                 //Handle User Text Message and Response To the User.
-                HandleTextMessage(senderID, event.message.text);
+                //HandleTextMessage(senderID, event.message.text);
             }
             //Check If the User Clicked on Button
             else if (event.postback) {
